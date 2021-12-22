@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  text-transform: capitalize;
+  list-style: none;
+  color: #000000;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* classes */
+
+/* sectiones heading  */
+.heading {
+  color: #ebeced;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  margin: 10px;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* centered section  */
+.centered {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* small screen */
+@media (min-width: 760px) {
+  .container {
+    width: 750px;
+  }
+  .logo {
+    width: 50px;
+  }
+}
+/* medium screen  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screen  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*---------------------------------------------- header */
+
+header {
+  padding: 10px;
+  height: 64px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 80px;
+  background-color: black;
+}
+
+.menu {
+  position: relative;
+}
+
+.bar-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+.bar-btn:hover span:nth-child(2),
+.bar-btn:hover span:last-child,
+.bar-btn:hover span:first-child {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bar-btn span {
+  background-color: #000000;
+  margin-bottom: 5px;
+  height: 3px;
+}
+
+.bar-btn span:first-child {
+  width: 100%;
+}
+
+.bar-btn span:nth-child(2) {
+  width: 75%;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+.bar-btn span:last-child {
+  width: 50%;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+
+.menu nav ul {
+  min-width: 150px;
+  padding: 10px;
+  background-color: #ededed;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  display: none;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.menu:hover nav ul {
+  display: block;
+}
+
+.menu nav ul::before {
+  content: "";
+  height: 20px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  border-style: solid;
+  border-width: 10px;
+  position: absolute;
+  right: 0px;
+  top: -40px;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li:not(:last-child)::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+}
+
+nav ul li:first-child::after {
+  bottom: 100px;
+}
+
+nav ul li:nth-child(2):after {
+  bottom: 71px;
+}
+
+nav ul li:nth-child(3):after {
+  bottom: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+
+nav ul li a:hover {
+  margin-left: 10px;
+}
+
+/* landing section  */
+
+.landing-sec {
+  background: #3fa796 url(../images/chris-herath-FcvIlm3I2Ts-unsplash.jpg);
+  background-size: cover;
+  height: calc(100vh - 64px);
+}
+
+.landing-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.landing-sec h2,
+.landing-sec p {
+  color: #3fa796;
+  line-height: 1.4;
+}
+
+.landing-sec h2 {
+  font-size: 2rem;
+}
+
+.landing-sec p {
+  font-size: 1.5rem;
+}
+
+/* feature-container */
+
+.feature-sec {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.feature-cont {
+  background-color: #ededed;
+  padding: 10px;
+  box-shadow: rgba(63, 167, 150, 0.4) 0px 5px, rgba(63, 167, 150, 0.3) 0px 10px,
+    rgba(63, 167, 150, 0.2) 0px 15px, rgba(63, 167, 150, 0.1) 0px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  text-align: center;
+}
+
+/* services section  */
+
+.services-sec {
+  margin-top: 50px;
+  text-align: center;
+}
