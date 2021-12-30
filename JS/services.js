@@ -1,14 +1,18 @@
-let icons = ["fa fa-magic", "fa fa-coffee", "fab fa-amazon", "fa fa-diamond", "fa fa-user", "fa fa-phone"];
+let fIcons = ["fa fa-magic", "fa fa-coffee", "fab fa-amazon", "fa fa-diamond"];
 
-function creatEle() {
-    for (let i = 0; i < icons.length; i++) {
+function creatSrvsS() {
+    for (let i = 0; i < fIcons.length; i++) {
         document.write(`
-        <div class = "feature-cont">
-        <h3>feature</h3>
-        <i class="${icons[i]}"></i>
+        <div class = "srvs-cont">
+        <h3>services</h3>
+        <i class="${fIcons[i]}"></i>
         <p>Lorem ipsum dolor sit amet.</p>
         </div>
         `)
     }
     return "";
 };
+
+document.write(`<div class="srvs-sec">`);
+document.write(`${creatSrvsS()}`);
+document.write(`</div>`);
